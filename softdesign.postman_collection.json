@@ -1,0 +1,201 @@
+{
+  "info": {
+    "_postman_id": "108bc384-d45b-4502-924e-19fadba5159d",
+    "name": "softdesign",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"password\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/login",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar livros",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTY3OTY4MjgxOCwiZXhwIjoxNjc5Njg0NjE4fQ.kR_xqNY9DABBLx4vjTitGJs_JF3lzXlhS8Ze6BR27wA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar livro especifico por Id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTY3OTY4MjgxOCwiZXhwIjoxNjc5Njg0NjE4fQ.kR_xqNY9DABBLx4vjTitGJs_JF3lzXlhS8Ze6BR27wA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/641debd509fb5989ce4f28ad",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "641debd509fb5989ce4f28ad"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Verificar disponibilidade",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTY3OTY4MjgxOCwiZXhwIjoxNjc5Njg0NjE4fQ.kR_xqNY9DABBLx4vjTitGJs_JF3lzXlhS8Ze6BR27wA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/641debda09fb5989ce4f28b1/check-availability",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "641debda09fb5989ce4f28b1", "check-availability"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastro de livro",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTY3OTY4MjUwMiwiZXhwIjoxNjc5Njg0MzAyfQ.ZA4H_8ArzjPDXhfqs99dSg5UQizkqrikRka23Kjtf3E",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"titulo 1\",\r\n    \"author\": \"autor 1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Editar/alugar livro",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTY3OTY4MjgxOCwiZXhwIjoxNjc5Njg0NjE4fQ.kR_xqNY9DABBLx4vjTitGJs_JF3lzXlhS8Ze6BR27wA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"titulo 11\",\r\n    \"author\": \"autor 11\",\r\n    \"borrower\": \"Jose\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/641debd709fb5989ce4f28af",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "641debd709fb5989ce4f28af"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar livro",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTY3OTY4MjgxOCwiZXhwIjoxNjc5Njg0NjE4fQ.kR_xqNY9DABBLx4vjTitGJs_JF3lzXlhS8Ze6BR27wA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/641debda09fb5989ce4f28b1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "641debda09fb5989ce4f28b1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
