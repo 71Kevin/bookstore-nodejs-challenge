@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  app:
+    build: .
+    container_name: softdesign-nodejs-challenge
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '50m'
+    ports:
+      - '3000:3000'
+    environment:
+      - TZ=America/Sao_Paulo
+      - ENV_PROD=1
+      - MONGO_HOST=mongo
+      - MONGO_DATABASE=library
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:latest
+    container_name: softdesign-nodejs-challenge-mongo
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_DATABASE=library
+    restart: unless-stopped
