@@ -2,7 +2,7 @@ version: '3.3'
 services:
   app:
     build: .
-    container_name: softdesign-nodejs-challenge
+    container_name: bookstore-nodejs-challenge
     logging:
       driver: 'json-file'
       options:
@@ -18,7 +18,7 @@ services:
       - mongo
   mongo:
     image: mongo:latest
-    container_name: softdesign-nodejs-challenge-mongo
+    container_name: bookstore-nodejs-challenge-mongo
     ports:
       - '27017:27017'
     environment:
