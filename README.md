@@ -1,4 +1,4 @@
-# softdesign-nodejs-challenge
+# bookstore-nodejs-challenge
 
 This is a NodeJS application with endpoints that allow managing books in a MongoDB database. The application aims to provide a set of operations that can be performed in a library.
 
@@ -169,4 +169,3 @@ Returns an object with the deleted book information.
 - This application uses .eslintrc.json and .prettierrc.json.
 - This application follows the Model-View-Controller (MVC) pattern and uses SOLID practices.
 - At the root of this project there is a file called **"softdesign.postman_collection.json"** which is a postman collection with all the application's endpoints.
-- **Feel free to check out my Github profile and look at my other projects 😊.**
